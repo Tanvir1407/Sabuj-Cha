@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=montserrat&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    background-color: #f3f3f3;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header ul li {
+    list-style-type: none;
+    display: inline-block;
+    
+    
+}
+header ul li > a{
+    text-decoration: none;
+    color: #242424;
+    padding: 0 25px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 100px;
+    transition: all 0.3s ease 0s;
+}
+header ul li a:hover{
+    color: rgb(81, 159, 16);
+}
+header ul span{
+    padding: 50px 30px;
+    font-size: 12px;
+    font-weight: 600;
+}
+header ul span::after{
+    content: "";
+    background-color: black;
+    height: 15px;
+    width: 1px;
+    position: absolute; 
+    right: 105px;
+    top:50px;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown_content{
+    min-width: 150px;
+    display: none;
+    position: absolute;
+    background-color: rgb(221, 219, 219);
+    box-shadow: 0 8px 10px 0 rgba(61, 61, 61, 0.3);
+}
+.dropdown_content a{
+    padding: 12px 16px;
+    line-height: 40px;
+    font-size: 12px;
+    font-weight: 400px;
+    text-decoration: none;
+    color: #242424;
+}
+.dropdown:focus,
+.dropdown:hover .dropdown_content{
+    display: block;
+
+}
+.dropdown_a{
+    position: relative;
+}
+.dropdown_content_a{
+    position: absolute;
+    display: none;
+}
+.currency{
+    position: relative;
+    cursor: pointer;
+}
+.currency_item{
+    display: none;
+    position: absolute;
+    background-color: rgb(221, 219, 219);
+    min-width: 120px;
+    padding: 5px 0 5px 10px;
+    right: -35px;
+    box-shadow: 0 8px 8px 2px rgba(0, 0, 6, .3);
+}
+.currency_item option{
+    padding-bottom: 10px;
+}
+.currency_item option:hover{
+    color:  rgb(81, 159, 16);
+}
+.currency:hover{
+    color: #3d3d3d;
+    transition: all .3s ease 0s;
+}
+.currency:hover .currency_item {
+    display: block;
+}
+
+/* header end */
+
+.slider{
+    padding: 250px 0 250px 100px ;
+    background-image: url("img/slider-1.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.slider h1,.color_text{
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 65px;
+    
+}.slider p{
+    font-family: Lora, serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgb(109, 106, 106);
+    padding-top:35px ;
+}
+.futures{
+    background-image: url("img/bg-1\ \(2\).jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 70px;
+    
+}
+    
+.future_pic1 , .future_pic2, .future_pic3, .future_pic4{
+    float: left;
+    margin: 15px;
+    position: relative; 
+}
+.content img{
+    border: 1px solid rgba(224, 224, 224, 0.712);
+}
+/* .future_pic1 .content ,.future_pic2 .content ,
+.future_pic3 .content ,.future_pic4 .content{
+    border: 1px solid rgba(224, 224, 224, 0.712);
+} */
+.future_pic1 .discount ,.future_pic3 .discount{
+    position: absolute;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    height: 50px;
+    width: 50px;
+    display: block;
+    background-color: #519F10;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 100%;
+    top: 10px;
+    left: 13px;
+    cursor: pointer;
+
+}
+.future_pic1 .content ,.future_pic2 .content ,
+.future_pic3 .content ,.future_pic4 .content{
+    position: relative;
+}
+.product_action{
+    position:absolute;
+    bottom: 28px;
+    right: 15px;
+    display: none;
+    
+}
+.future_pic1:hover .product_action, 
+.future_pic2:hover .product_action,
+ .future_pic3:hover .product_action, 
+ .future_pic4:hover .product_action{
+    display: block;
+}
+.product_action a{
+  padding: 10px;
+  background-color: #e2e1e1;
+  transform: scaleY(0);
+  transition: all 0.4s ease-in-out 0s;
+}
+.product_action a i{
+    color: #292828f1;
+}
+
+.product_action a:hover{
+    background-color:#519F10;
+}
+.product_action a:hover .icon{
+    color: white;
+}
+.future_pic1 h4,
+.future_pic2 h4,
+.future_pic3 h4,
+.future_pic4 h4{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: #666666;
+}
+.future_pic1 .price,
+.future_pic2 .price,
+.future_pic3 .price,
+.future_pic4 .price{
+    color:rgb(51, 51, 51);
+    font-size: 14px;
+    font-family: "Work Sans", sans-serif;
+    font-weight:600;
+
+}
+.future_pic1 .price del,
+.future_pic2 .price del,
+.future_pic3 .price del,
+.future_pic4 .price del{
+    color:   rgb(118, 117, 117)
+}
+
+.futures::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/* future end */
+.banner_box{
+    display:flex;
+    justify-content: space-between;
+    padding: 90px;
+    position: relative;
+}
+.banner_box .banner_post{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 30px;
+}
+.banner_box .banner_post h4{
+    
+    font-size: 38px;
+    font-weight: 400;
+    color: rgb(81, 159, 16);
+}
+.banner_box .banner_post h5{
+    font-size: 14px;
+    font-weight: 600;
+    font-family:Montserrat, sans-serif;
+    color:  rgb(72, 72, 72);
+}
+.banner_box a img{
+    transition: all 1.5s ease 0s;
+    width: 100%;
+}
+.banner_box .banner2:hover img{
+    transform: scale(1.4,1.4);
+}
+
+/* future end */
+
+.product__list{
+    background-color:#f3f3f3;
+    padding: 90px 70px;
+
+}
+.product__list .head, .latest_news .head{
+    margin-left: 50%;
+    transform: translateX(-50%); 
+    font-family: "Playfair Display", serif;
+    font-size: 38px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 25px;
+
+}
+.product__list h3::before{
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: #2b2b2b;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    bottom: 1px;
+}
+
+
+
+.product__list::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* This section end */
+
+.container__text{
+    padding: 100px 70px;
+}
+.container__text img{
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.container__text p{
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    font-style: italic;
+    color:  rgb(75, 71, 71);
+}
+.container__text h4{
+    font-family: Montserrat, sans-serif;
+    margin-top: 40px;
+    font-size: 12px;
+    color: rgb(80, 80, 80);
+    text-align: center;
+}
+.container__text h5{
+    text-align: center;
+    font-size: 12px;
+    color: rgb(143, 143, 143);
+    padding-top: 7px;
+}
+.latest_news{
+    background-color: #e2e1e1;
+    padding: 100px;
+    position: relative;
+}
+.latest_news h3{
+    display: block;
+}
+.latest_news h3::before {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: #2b2b2b;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    bottom: 1px;
+}
+.latest_news .news_colum {
+    display: flex;
+    margin-left: 25px;
+
+}
+.latest_news .head{
+    margin-bottom: 50px;
+}
+
+.news__info .data{
+   
+    color: #519F10;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 700;
+    padding-top: 30px;
+    text-decoration: underline;
+}
+.news__info a{
+    text-decoration: none;
+    color:  #2b2b2b;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "Playfair Display", serif;
+    transition: .4s all ease 0s;
+}
+.news__info a:hover{
+    color: #519F10;
+}
+.news__info h3{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.news__info p{
+    color: rgb(109, 106, 106);
+    line-height: 1.6;
+    font-size: 17px;
+    margin-bottom: 5px;
+
+}
+.news__info .read{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: #484848;
+    font-weight: 600;
+    border-bottom: 1px solid #484848;
+}
